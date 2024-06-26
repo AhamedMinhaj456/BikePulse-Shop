@@ -1,0 +1,116 @@
+.payment-charge-main {
+    display: flex;
+    height: 100vh;
+}
+
+.payment-charge-management {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 300px;
+        margin-right: 10px;
+        padding: 20px;
+      }
+
+  .payment-charge-management-content {
+    height: 2130px;
+    width: 798px;
+    border-radius: 15px;
+    background-color: #f1f4f6;
+    margin-top: 15px;
+  }
+
+  .group-x {
+    margin-left: 50px;
+    margin-top: 30px;
+    height: 49px;
+    border-radius: 15px;
+    background-color: #d9e5f2;
+    display: flex;
+    width: 684px;
+    
+    
+  }
+
+ .category-1 {
+    border-radius: 15px;
+    height: 198px;
+    width: 684px;
+    background-color: #d6eefc;
+    margin-top: 20px;
+    margin-left:50px ;
+  }
+ 
+  .title-1 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+  }
+
+  .text-1 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+    margin-left: 30px;
+   
+  }
+ 
+
+  .group-1,.group-2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 49px;
+    border-radius: 15px;
+    background-color: #d9e5f2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .text-2 {
+    margin-left: 20px;
+    text-align: left;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+  .text-3 {
+    margin-top: auto;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+ 
+
+  .text-4 {
+    margin-left: 20px;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+  .text-5{
+    margin-right: 20px;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+
+  
+
+
+ 
+

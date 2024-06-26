@@ -1,0 +1,282 @@
+.parts-Category-main {
+    display: flex;
+    height: 100vh;
+}
+
+.parts-category-management {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        
+      }
+      
+
+  .parts-category-management-content {
+    width: 798px;
+    border-radius: 15px;
+    background-color: #f1f4f6;
+    margin-top: 15px;
+  }
+
+  .category-1 {
+    border-radius: 15px;
+    /* height: 680px; Remove or adjust this line */
+    min-height: 250px; /* Add this line to ensure it's at least 680px tall */
+    width: 684px;
+    background-color: #d6eefc;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-top: 1px;
+  }
+
+  .category-1 h3 {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+ 
+  .text-1 h3{
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+    margin-left: 30px;
+    margin-top: 10px;
+   
+  }
+  .text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+    margin-right: 100px;
+  }
+
+
+  .title-1 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+  }
+
+  .group-1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #d9e5f2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .text-3 {
+    margin-left: 20px;
+    text-align: left;
+    margin-top: auto;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: auto;
+   
+  }
+  .text-4 {
+    margin-top: auto;
+    margin-right: 20px;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: auto;
+    
+  }
+  .group-2{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    height: 49px;
+    background-color: #d9e5f2;
+    margin-top: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .text-5 {
+    margin-left: 20px;
+    margin-top: auto;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: auto;
+    
+  }
+  .text-6 {
+    margin-right: 20px;
+    margin-top: auto;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: auto;
+    
+  }
+  
+ 
+  .insert-button {
+    margin: auto; /* Add this line to center the button horizontally */
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    background-color: #44c00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+
+
+  .insert-button:hover {
+    background-color: #0056b3 ;
+  }
+
+  /* Adjustments for the popover content */
+
+  .popover {
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  .popover-content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: #000000;
+  }
+  
+  .popover-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+  }
+  
+  .popover-header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .popover-close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .popover-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popover-body input {
+    margin-bottom: 10px;
+  }
+
+  .popover-body input:focus {
+    border-color: #44c00f; /* Change the border color */
+    box-shadow: 0 0 5px #44c00f; /* Add a box shadow */
+  }
+  
+  .dropdownpop{
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 5px;
+    
+    }
+
+
+  .input-wrapper,
+  .upload-wrapper {
+  margin-bottom: 10px;
+  }
+  
+  .upload-wrapper input[type="file"] {
+    display: none;
+  }
+  
+  .upload-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .popover-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #44c00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popover-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-width: 768px) {
+    .parts-category-management {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .parts-category-management-content {
+        width: 100%;
+    }
+
+    .category-1 {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .insert-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .popover-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+  .parts-category-management {
+    padding: 5px;
+    width: 100%;
+}
+    .text-1, .text-3, .text-4, .text-5, .text-6 {
+        font-size: 14px;
+    }
+
+    .popover-header {
+        font-size: 16px;
+    }
+
+    .popover-body input {
+        font-size: 12px;
+    }
+
+    .popover-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

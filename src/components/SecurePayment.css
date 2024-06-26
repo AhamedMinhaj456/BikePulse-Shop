@@ -1,0 +1,196 @@
+.secure-payment {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    text-align: center;
+    padding: 20px; 
+}
+
+.secure-payment-left {
+    flex-basis: 48%;
+    color: purple; 
+    text-align: center;
+    align-items: flex-start;
+}
+
+.secure-payment-left h2 {
+    margin: 70px; 
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    color: purple; 
+   
+}
+
+.Visa {
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+.secure-payment-right {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    margin-right: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.secure-payment-right h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+   
+}
+
+.fields p1{
+    font-weight: 600;
+}
+
+.securepayment-form-control {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color:rgb(204, 203, 201);
+    padding: 10px;
+
+    
+    
+}
+
+
+.securepayment-form-control label {
+    margin-bottom: 5px;
+    margin-left: 10px; 
+    width: auto; 
+    text-align: left; 
+  
+}
+
+
+.securepayment-form-control input {
+    width: 100%;
+    align-self: center;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+   
+   
+}
+
+
+.last-para p{
+    font-family: cambria;
+    font-weight: 900px;
+   
+}
+
+
+
+
+.securepayment-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;   
+}
+
+.securepayment-button-container button[type="submit"] {
+    align-self: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(18, 4, 88);
+    font-weight: bold;
+    margin-top: 40px;
+    color: azure;
+}
+
+.securepayment-button-container button[type="submit"]:hover {
+    background-color: rgb(197, 114, 239);
+}
+
+
+@media (max-width: 1024px) {
+    .secure-payment {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .secure-payment-left {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .secure-payment-left h2 {
+        margin: 40px 0;
+        font-size: 2rem;
+    }
+
+    .secure-payment-right {
+        width: 80%;
+        padding: 20px;
+        margin-right: 0;
+    }
+
+    .Visa {
+        margin-left: 0;
+    }
+
+    .fields {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .securepayment-form-control input {
+        height: 25px;
+    }
+
+   
+}
+
+@media (max-width: 768px) {
+    .secure-payment-left h2 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .secure-payment-right {
+        width: 100%;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .fields {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .securepayment-form-control input {
+        height: 20px;
+    }
+
+    .Visa {
+        margin: 10px auto;
+    }
+
+   
+}

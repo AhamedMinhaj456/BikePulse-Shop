@@ -1,0 +1,164 @@
+.subscription {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    flex-direction: column; /* Ensures elements stack on smaller screens */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.subscription-left {
+    color: purple;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.subscription-left h2 {
+    margin: 70px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: purple;
+}
+
+.subscription-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 820px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.subscription-right h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.subscription-registrationform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Reduced the gap for smaller screens */
+    width: 100%;
+    margin-top: 30px;
+    overflow-y: scroll;
+}
+
+
+.advancedplan,
+.basicplan,
+.premiumplan {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Ensure the plan boxes take full width */
+    max-width: 300px; /* Limit the maximum width for better layout */
+}
+
+.advancedplan:hover,
+.basicplan:hover,
+.premiumplan:hover {
+    background-color: #94c3f0;
+}
+
+.tx-1 {
+    color: rgb(100, 55, 95);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.tx-2 {
+    color: rgb(51, 65, 125);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.UL {
+    padding-left: 20px;
+}
+
+.LI {
+    margin: 5px 0;
+    padding-left: 1em;
+    text-indent: -1em;
+    display: flex;
+    align-items: baseline;
+}
+
+.buynowbutton {
+    background-color: #16c45b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.buynowbutton:hover {
+    background-color: #128c4e;
+}
+
+@media (max-width: 1024px) {
+    .subscription-left h2 {
+        margin: 40px 0;
+        font-size: 2rem;
+    }
+
+    .subscription-right {
+        padding: 20px;
+    }
+
+    .subscription-registrationform {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .advancedplan,
+    .basicplan,
+    .premiumplan {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscription-left h2 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .subscription-right {
+        padding: 15px;
+    }
+
+    .subscription-registrationform {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .advancedplan,
+    .basicplan,
+    .premiumplan {
+        max-width: 100%;
+    }
+
+   
+}

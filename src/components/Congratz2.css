@@ -1,0 +1,149 @@
+.congratz2 {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    text-align: center;
+    padding: 20px; 
+}
+
+.congratz2-left {
+    flex-basis: 48%;
+    color: purple; 
+    text-align: center;
+    align-items: flex-start;
+}
+
+.congratz2-left h2 {
+    margin: 70px; 
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    color: purple; 
+   
+}
+
+.congratz2-right {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    margin-right: 80px;
+}
+
+.congratz2-right h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+
+.parts-des {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.parts-des p1 {
+    margin-top: 20px;
+    font-weight: 800;
+    margin-left: 60px;
+}
+
+
+.parts-des p2 {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.parts-des p3 {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.UnorderedList1 {
+    padding-left: 30px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+
+.congratz-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;  
+    margin-bottom: 20px; 
+}
+
+.congratz-button-container button[type="submit"] {
+    align-self: center;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(18, 4, 88);
+    font-weight: bold;
+    margin-top: 40px;
+    color: azure;
+}
+
+.congratz-button-container button[type="submit"]:hover {
+    background-color: rgb(197, 114, 239);
+}
+
+/* For screen size 1024px and below */
+@media only screen and (max-width: 1024px) {
+    .congratz2 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .congratz2-left {
+      flex-basis: 100%;
+      margin: 20px 0;
+    }
+  
+    .congratz2-right {
+      width: 80%;
+      margin: 20px 0;
+    }
+  
+    .parts-des p1 {
+      margin-left: 10px; /* Adjust margin for smaller screens */
+    }
+  
+    .UnorderedList1 {
+      margin-left: 10px; /* Adjust margin for smaller screens */
+    }
+  
+ 
+  }
+  
+  /* For screen size 768px and below */
+  @media only screen and (max-width: 768px) {
+    .congratz2-left h2 {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+  
+    .congratz2-right {
+      width: 90%; /* Adjust width for smaller screens */
+      margin-right: 20px; /* Adjust margin for smaller screens */
+    }
+  
+    .parts-des p1 {
+      margin-left: 20px; /* Further adjust margin for smaller screens */
+    }
+  
+    .UnorderedList1 {
+      margin-left: 20px; /* Further adjust margin for smaller screens */
+    }
+  }
+  

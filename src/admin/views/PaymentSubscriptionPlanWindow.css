@@ -1,0 +1,134 @@
+.payment-subscription-main {
+    display: flex;
+    height: 100vh;
+}
+
+.payment-subscription-management {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 300px; /* Adjust the margin to fit between the left sidebar and the categories */
+        margin-right: 10px; /* Adjust the margin to fit between the categories and the right sidebar */
+        padding: 20px;
+      }
+
+  .payment-subscription-management-content {
+    height: 2130px;
+    width: 798px;
+    border-radius: 15px;
+    background-color: #f1f4f6;
+    margin-top: 15px;
+  }
+
+ .category-1 {
+    border-radius: 15px;
+    height: 198px;
+    width: 684px;
+    background-color: #d6eefc;
+    margin-top: 20px;
+    margin-left:50px ;
+  }
+ 
+  .text-1,.text-6 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+    margin-left: 30px;
+    margin-top: 10px;
+   
+  }
+ 
+
+  .title-1,.title-2 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+  }
+
+  .group-1,.group-3 {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 49px;
+    border-radius: 15px;
+    background-color: #d9e5f2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .text-2,.text-7 {
+    margin-left: 20px;
+    text-align: left;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+  .text-3,.text-8 {
+    margin-top: auto;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+  .group-2,.group-4{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    height: 49px;
+    background-color: #d9e5f2;
+    margin-top: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .text-4,.text-9 {
+    margin-left: 20px;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+  .text-5,.text-10 {
+    margin-right: 20px;
+    margin-top: auto;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: auto;
+    color: #000000;
+  }
+
+  .category-2 {
+    border-radius: 15px;
+    height: 230px;
+    width: 684px;
+    background-color: #d6eefc;
+    margin-top: 20px;
+    margin-left:50px ;
+  }
+  
+  .dropdownsubs {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+   
+    justify-content: center;
+    color: rgb(133, 133, 130);
+    width: 640px;
+    
+  }
+
+ 
+

@@ -1,0 +1,147 @@
+.Reg-1 {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    text-align: center;
+    padding: 20px; 
+}
+
+.Reg-1-left {
+    flex-basis: 48%;
+    color: purple; 
+    text-align: center;
+    align-items: flex-start;
+}
+
+.Reg-1-left h2 {
+    margin: 70px; 
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    color: purple; 
+   
+}
+
+.Reg-1-right {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    margin-right: 80px;
+}
+
+.Reg-1-right h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+
+.parts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: azure;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.parts p1 {
+    margin-top: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+
+.parts p2,.parts p3 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.parts p4 {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+.rp-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;  
+    margin-bottom: 20px; 
+}
+
+.rp-button-container button[type="submit"] {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 40px;
+    background: rgb(18, 4, 88);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(113, 90, 211, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #f5f2f2;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.rp-button-container button[type="submit"]:hover {
+    background-color: rgb(197, 114, 239);
+}
+
+
+@media (max-width: 1024px) {
+    .Reg-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Reg-1-left, .Reg-1-right {
+        flex-basis: 100%;
+        width: 90%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .Reg-1-left h2 {
+        margin: 40px 0;
+        font-size: 2rem;
+    }
+
+    .Reg-1-right {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .parts {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Reg-1-left h2 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .Reg-1-right {
+        padding: 15px;
+    }
+
+    .parts {
+        width: 100%;
+    }
+}

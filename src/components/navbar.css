@@ -1,0 +1,349 @@
+.navbar-container {
+    background-color: #bfe9ff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px; 
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 120px; 
+    width: auto; 
+}
+
+.brand-text {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, rgb(3, 4, 94) 0%, rgb(0, 119, 182) 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.navbar-links {
+    display: flex;
+    margin-right: auto;
+}
+
+.navbar-links .nav-link {
+    margin-left: 80px; 
+    color: #03045e;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+.navbar-links .nav-link:hover {
+    color: rgb(59, 53, 150); 
+}
+.login-button {
+    background-color: #03045e;
+    border-radius: 30px;
+    height: 35px;
+    width: 135px;
+    color: white;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px; 
+   margin-top: 3px;
+}
+.login-button:hover {
+    color: rgb(162, 162, 166);
+}
+.bi-bi-person-circle{
+    font-size: 30px !important;
+    position: absolute;
+    top: 25px;
+    margin-left: 30px;
+    font-size: 60px ; 
+    color: #03045e;
+  }
+
+
+
+  /* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; 
+    margin: 0; 
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 1000px; /* Set width to 80% */
+    left: 50%; /* Center align horizontally */
+    top: 100%; /* Position below the dropdown trigger link */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.home-customer-text{
+    color: #09090a;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: bold;
+    
+}
+
+
+/* for pricing tag*/
+.pricing-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.left-section,
+.right-section {
+    flex-basis: calc(50% - 20px); 
+}
+
+.left-section {
+    text-align: justify; 
+}
+
+.right-section {
+    text-align: justify; 
+}
+
+.subtitle {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+.plan-list {
+    list-style-type: disc; /* Use bullets */
+    padding-left: 20px; /* Add padding to adjust the bullets */
+}
+.main-title {
+    text-align: center; /* Center align the main title */
+    font-weight: 600;
+}
+/*pricing tag decoration finish */
+
+
+/* for resource tag*/
+.resources-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.left-section,
+.right-section {
+    flex-basis: calc(50% - 20px);
+}
+
+.left-section {
+    text-align: justify;
+}
+
+.right-section {
+    text-align: justify;
+}
+
+.subtitle {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 600;
+}
+/* finish resouce tag styles */
+
+
+/* for technology tag*/
+.technology-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.left-section,
+.right-section {
+    flex-basis: calc(50% - 20px);
+}
+
+.left-section {
+    text-align: justify;
+}
+
+.right-section {
+    text-align: justify;
+}
+
+.subtitle {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 600;
+}
+/* finish technology tag styles */
+
+
+/* for services tag*/
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+       
+        
+    }
+    
+
+
+.left-section,
+.right-section {
+    flex-basis: calc(50% - 20px);
+}
+
+.left-section {
+    text-align: justify;
+}
+
+.right-section {
+    text-align: justify;
+}
+
+.subtitle {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 600;
+}
+/* finish services tag styles */
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        height: auto;
+        flex-direction: column; 
+        padding: 15px; 
+    }
+
+    .navbar-links {
+        margin-top: 2px; 
+        justify-content: center;
+    }
+
+    .navbar-links .nav-link {
+        margin: 10px; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar-container {
+        height: auto;
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    .navbar-links {
+        margin-top: 2px; 
+        justify-content: center;
+    }
+
+    .navbar-links .nav-link {
+        margin: 10px; 
+    }
+}

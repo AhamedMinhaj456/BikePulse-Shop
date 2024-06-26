@@ -1,0 +1,138 @@
+.reservation-management {
+  display: flex;
+  height: 100vh;
+}
+
+
+.reservation-management-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ 
+}
+
+.reservation-management-content h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.reservation-list {
+  overflow-y: auto;
+  width: 100%;
+  max-width: 750px;
+  margin-top: 10px;
+  background-color: #CAF0F8(185, 190, 190);
+}
+
+.reservation-item {
+  background-color: #F1F4F7;
+  margin-bottom: 10px; /* Reduced margin */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px; /* Reduced padding */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.reservation-item p {
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.reservation-item button.accept-btn {
+  margin-right: 5px; /* Reduced margin */
+  height: 30px; /* Adjusted height */
+  padding: 0 20px; /* Adjusted padding */
+  background-color: green; /* Default button color */
+  color: white; /* Text color */
+  border: none; /* Remove button border */
+  font-size: 16px; /* Adjusted font size */
+  border-radius: 8px; /* Add border radius */
+  align-items: center;
+}
+
+.reservation-item button.delete-btn {
+  margin-right: 5px; /* Reduced margin */
+  height: 30px; /* Adjusted height */
+  padding: 0 20px; /* Adjusted padding */
+  background-color: darkred; /* Default button color */
+  color: white; /* Text color */
+  border: none; /* Remove button border */
+  font-size: 16px; /* Adjusted font size */
+  border-radius: 8px; /* Add border radius */
+  align-items: center;
+}
+
+.reservation-item button:hover {
+  background-color: lightblue; /* Button color on hover */
+}
+
+
+@media screen and (max-width: 1200px) {
+  .reservation-management-content {
+    margin-left: 150px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .reservation-management-content {
+    margin-left: 100px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left-sidebar {
+    width: 250px;
+  }
+  .right-sidebar {
+    width: 70px;
+  }
+
+  .reservation-management-content {
+    margin-left: 250px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+  .reservation-list {
+    width: 100%;
+  }
+
+  .reservation-component-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reservation-management-content {
+    margin-left: 0;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .reservation-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reservation-item button.accept-btn,
+  .reservation-item button.delete-btn {
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+
+  .reservation-component-div {
+    margin-right: 0;
+  }
+}

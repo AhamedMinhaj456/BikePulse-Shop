@@ -1,0 +1,39 @@
+.title main{
+    background-color: rgb(136, 160, 160);
+    margin: 0;
+}
+
+
+.details{
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.about-left{
+    flex-basis: 40%;
+}
+
+.about-left h3 {
+    font-size: 20px;
+    text-align: center;
+  
+}
+
+.about-left p {
+    font-size: 15px;
+    text-align: center;
+    color: blueviolet;
+  
+}
+
+.about-right{
+    flex-basis: 40%;
+}
+
+.Image1{
+    width: 100%;
+    border-radius: 10px;
+}

@@ -1,0 +1,155 @@
+.reg-complete {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    text-align: center;
+    padding: 20px; 
+}
+
+.reg-complete-left {
+    flex-basis: 48%;
+    color: purple; 
+    text-align: center;
+    align-items: flex-start;
+}
+
+.reg-complete-left h2 {
+    margin: 70px; 
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    color: purple; 
+   
+}
+
+.reg-complete-right {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    margin-right: 80px;
+    align-items: center;
+  
+}
+
+.reg-complete-right h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+
+.part2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: azure;
+    border-radius: 5px;
+    width: 500px;
+    padding: 10px;
+
+}
+
+.part2 p1 {
+    margin-top: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.part2 h3 {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(81, 39, 119);
+    margin-top: 30px;
+}
+.part2 p2, .part2 p3 {
+    margin-left: 10px;
+}
+.part2 p4 {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.rc-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  
+    margin-bottom: 30px; 
+}
+
+.rc-button-container button[type="submit"] {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 40px;
+    background: rgb(18, 4, 88);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(113, 90, 211, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #f5f0f0;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.rc-button-container button[type="submit"]:hover {
+    background-color: rgb(197, 114, 239);
+}
+
+@media (max-width: 1024px) {
+    .reg-complete {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reg-complete-left, .reg-complete-right {
+        flex-basis: 100%;
+        width: 90%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .reg-complete-left h2 {
+        margin: 40px 0;
+        font-size: 2rem;
+    }
+
+    .reg-complete-right {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .part2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reg-complete-left h2 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .reg-complete-right {
+        padding: 15px;
+    }
+
+    .part2 {
+        width: 100%;
+    }
+
+}

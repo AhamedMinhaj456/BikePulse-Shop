@@ -1,0 +1,108 @@
+.shop-profile-window {
+    display: flex;
+    height: 100vh;
+}
+
+.shop-profile-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+   
+}
+
+.shop-profile-content h2 {
+    margin-bottom: 20px;
+}
+
+.shop-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.shop-profile-form {
+    width: 500px;
+    max-width: 100%;
+    overflow-y: auto;
+}
+
+.shop-profile-content label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.shop-profile-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.shop-profile-content button {
+    background-color: #2467c5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.shop-profile-content button:hover {
+    background-color: #45a049;
+}
+
+.shop-profile-form button1 {
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.shop-profile-form button1:hover {
+    background-color: #3e3f3e;
+}
+
+@media (max-width: 768px) {
+    
+
+    .shop-profile-content {
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .shop-profile-content h2 {
+        margin: 20px auto;
+    }
+
+    .shop-profile-form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .shop-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shop-profile-content input {
+        padding: 8px;
+    }
+
+    .shop-profile-content button {
+        padding: 8px 16px;
+    }
+}

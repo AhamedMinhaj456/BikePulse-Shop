@@ -1,0 +1,162 @@
+.shopOwnerFlow{
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/handshake.jpeg') center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    text-align: center;
+    padding: 20px; 
+    
+}
+
+.shopOwnerFlow-left{
+    flex-basis: 48%;
+    color: purple; 
+    text-align: center;
+    align-items: flex-start;
+}
+
+.shopOwnerFlow-left h2 {
+    margin: 70px; 
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    color: purple; 
+}
+
+.shopOwnerFlow-right{
+    flex-basis: 40%;
+    color: black; 
+    background-color: #fff;
+    border-radius: 10px;
+    
+  }
+
+
+.shopOwnerFlow-right h1{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-top: 20px;
+}
+
+
+.shopOwnerFlow-right form {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack labels and inputs vertically */
+}
+
+.shopOwnerFlow-right form input {
+    display: block;
+    width: 80%;
+    height: 30px;
+    border-radius: 2px;
+    align-items: center;
+    background: rgb(248, 244, 244);
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+
+}
+
+.shopOwnerFlow-right form label{
+    align-items: flex-start;
+    text-align: left; /* Add this line to align text to the left */
+    width: 80%; /* Adjust width as needed */
+    
+
+}
+
+.shopOwnerFlow-right p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(99, 98, 98);
+}
+
+.shopOwnerFlow-right .btn-container {
+    display: flex;
+    justify-content: center;
+    width: 50%; /* Adjust width as needed */
+    margin-top: -20px; /* Add margin between buttons */
+}
+
+.shopOwnerFlow-right button {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 40px;
+    background: lightskyblue;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(113, 90, 211, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.shopOwnerFlow-right button:hover {
+    background: blue; 
+    color: white; 
+}
+
+
+@media (max-width: 1024px) {
+    .shopOwnerFlow {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .shopOwnerFlow-left, .shopOwnerFlow-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .shopOwnerFlow-left h2 {
+        margin: 20px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .shopOwnerFlow-left h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    .shopOwnerFlow-right {
+        padding: 10px;
+    }
+    .shopOwnerFlow-right form input {
+        width: 90%;
+    }
+    .shopOwnerFlow-right form label {
+        width: 90%;
+    }
+    .shopOwnerFlow-right .btn-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .shopOwnerFlow-right button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopOwnerFlow-left h2 {
+        font-size: 1.2rem;
+    }
+    .shopOwnerFlow-right h1 {
+        font-size: 24px;
+    }
+    .shopOwnerFlow-right form input {
+        width: 100%;
+    }
+    .shopOwnerFlow-right form label {
+        width: 100%;
+    }
+}

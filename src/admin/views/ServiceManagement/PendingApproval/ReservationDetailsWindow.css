@@ -1,0 +1,85 @@
+.Reservation-details-management {
+    display: flex;
+    height: 100vh;
+    
+  }
+  
+ 
+  
+  .Reservation-details-management-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-left: 100px; /* Adjust the margin to fit between the left sidebar and the categories */
+    margin-right: 100px; /* Adjust the margin to fit between the categories and the right sidebar */
+    padding: 20px;
+  }
+  
+  .Reservation-details-management-content h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+   .Reservation-details-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    justify-content: space-between;
+    max-width: 750px;
+    
+  }
+  
+  .Reservation-details-item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px; /* Adjust padding as needed */
+    justify-content: space-between;
+    width: 250%;
+  }
+
+
+  .Reservation-details-list p {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: flex; /* Enable flexbox for proper alignment */
+    justify-content: space-between; /* Align content to fill available space */
+  }
+  
+  .Reservation-details-list p strong {
+    margin-right: 10px; /* Add margin between category name and value */
+    text-align: left; /* Left-align category name */
+  }
+  
+  .Reservation-details-list p span {
+    text-align: right; /* Right-align category value */
+  }
+  
+    
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  
+

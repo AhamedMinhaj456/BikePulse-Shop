@@ -1,0 +1,209 @@
+.verification {
+  width: 100%;
+  min-height: 100vh;
+  background: url('../assets/handshake.jpeg') center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;    
+  text-align: center;
+  padding: 20px; 
+}
+
+.verification-digit {
+width: 40px;
+height: 40px;
+margin-right: 10px;
+text-align: center;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+line-height: 40px; /* Center vertically */
+text-align: center; /* Center horizontally */
+}
+
+.verification-left {
+  flex-basis: 48%;
+  color: purple; 
+  text-align: center;
+  align-items: flex-start;
+}
+
+.verification-left h2 {
+  margin: 70px; 
+  font-size: 2.5rem; 
+  line-height: 1.2;
+  color: purple; 
+ 
+}
+
+
+
+.verification-right {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  background: lightblue;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 30px 40px;
+  margin-right: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-right h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.verify-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: azure;
+  border-radius: 10px;
+  justify-content: center;
+  width: 475px;
+  padding: 5px;
+}
+
+.verify-number p1 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height: 20%;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.verify-number p2 {
+  text-align: left;
+  font-size: 16px;
+  font-family: Poppins;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+ margin-left: 20px;
+}
+
+.verify-number p3 {
+  text-align: center;
+  font-size: 15px;
+  font-family: Poppins;
+  line-height: 20%;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.group-rectangles {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 401px;
+  margin-top: 20px;
+}
+
+.rectangle,
+.rectangle,
+.rectangle,
+.rectangle,
+.rectangle,
+.rectangle {
+  border-radius: 5px;
+  height: 49px;
+  width: 48px;
+  background-color: #fffdfd;
+  border: 0.4px solid #000000;
+}
+
+
+
+
+
+
+.veri-button-container {
+  display: flex;
+  justify-content: center;  
+  margin-top: 20px; 
+}
+
+.veri-button-container button[type="submit"] {
+  width: 200px;
+  height: 35px;
+  background: rgb(18, 4, 88);;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(161, 38, 38, 0.1);
+  cursor: pointer;
+  font-size: 15px;
+  color: #f2ecec;
+  font-weight: 700;
+
+}
+
+.veri-button-container button[type="submit"]:hover {
+  background-color: rgb(197, 114, 239);
+}
+
+@media (max-width: 1024px) {
+  .verification {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .verification-left, .verification-right {
+    flex-basis: 100%;
+    width: 90%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .verification-left h2 {
+    margin: 40px 0;
+    font-size: 2rem;
+  }
+
+  .verification-right {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .verify-number {
+    width: 90%;
+  }
+
+  .group-rectangles {
+    width: 90%;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .verification-left h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+
+  .verification-right {
+    padding: 15px;
+  }
+
+  .verify-number {
+    width: 100%;
+  }
+
+  .group-rectangles {
+    width: 100%;
+  }
+
+ 
+}

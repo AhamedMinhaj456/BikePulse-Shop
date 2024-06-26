@@ -1,0 +1,43 @@
+.customer-management {
+    display: flex;
+    height: 100vh;
+  }
+  
+ 
+  
+  .customer-management-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 350px;
+    margin-right: 100px;
+    padding: 20px;
+  }
+  
+  .customer-management-content h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .customer-list {
+    overflow-y: auto;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  .customer-item {
+    background-color: #F1F4F7;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .customer-item p {
+    margin-bottom: 10px;
+  }
+  
+ 
