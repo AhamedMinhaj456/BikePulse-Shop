@@ -65,6 +65,7 @@ const ShopOwnerFlow = () => {
       subscriptionPlan,
     };
     localStorage.setItem("formData", JSON.stringify(formData));
+    localStorage.setItem("email", email);
   };
 
   return (
@@ -156,7 +157,7 @@ const ShopOwnerFlow = () => {
             placeholder="Enter your tax ID"
             value={taxId}
             onChange={(e) => setTaxId(e.target.value)}
-            required
+            
             disabled={submitted && !editing}
           />
          

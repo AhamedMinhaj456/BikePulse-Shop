@@ -54,8 +54,8 @@ const Congratz2 = () => {
             </div>
             <div className="parts-des">
               <p1>Your registration fee has been successfully processed.</p1>
-              <p2>Transaction Details :</p2>
-              <div className="UnorderedList1">
+              {/* <p2>Transaction Details :</p2> */}
+              {/* <div className="UnorderedList1">
                 <p className="ListItem">
                   Transaction ID :{" "}
                   {transactionIdArr[transactionIdArr.length - 1]}
@@ -64,7 +64,7 @@ const Congratz2 = () => {
                   Amount Paid : {selectedSubscriptionPlan.subscriptionPlanPrice}
                 </p>
                 <p className="ListItem">Payment Method : {"Card"}</p>
-              </div>
+              </div> */}
               <p3>
                 Thank you for completing the payment. Your shop registration is
                 now complete. Our team will review your details, and you will
@@ -75,7 +75,7 @@ const Congratz2 = () => {
             </div>
 
             <div className="congratz-button-container">
-              <button type="submit" onClick={() => navigate("/ShopLogin")}>
+              <button type="submit" onClick={() => navigate("/shop-setting-window")}>
                 Continue
               </button>
             </div>

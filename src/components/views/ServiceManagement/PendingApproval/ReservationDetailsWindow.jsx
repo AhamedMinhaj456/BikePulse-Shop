@@ -75,8 +75,9 @@ const ReservationDetailsWindow = ({ reservationId }) => {
             params: { approvedStatus: status },
         });
        // alert(`Approved status updated to ${status}`);
-        fetchUserStatus(); // Refresh the status after update
-        window.location.reload();
+       window.location.reload();
+       fetchUserStatus(); // Refresh the status after update
+        
     }
 };
 

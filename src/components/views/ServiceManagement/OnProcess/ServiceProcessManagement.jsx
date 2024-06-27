@@ -10,7 +10,7 @@ import Footer from '../../../../components/ShopRegister/Footer';
 import { useSelector } from "react-redux";
 
 const ServiceProcessManagement = () => {
-  const shopId = useSelector((state) => state.shops);
+  const shopId = useSelector((state) => state.shopId);
   const [reservationRequests, setReservationRequests] = useState([
     {
         reservationId: 1,

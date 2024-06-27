@@ -27,6 +27,9 @@ const SecurePayment = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // Navigate to the next page
+        navigate("/Congratz2");
+
         // Check if any field is empty
         if (!cardData.cardNumber || !cardData.cardHolderName || !cardData.cvc || !cardData.expireDate) {
             setError('Please fill in all fields.');
@@ -56,8 +59,7 @@ const SecurePayment = () => {
             expireDate: cardData.expireDate,
         }));
 
-        // Navigate to the next page
-        navigate("/Congratz2");
+        
     };
 
     return (
@@ -78,13 +80,13 @@ const SecurePayment = () => {
                             <img src={Visa} alt='' className='Visa'/>
                             <div className="securepayment-form-control">
                                 <label>Card number</label>
-                                <input type='number' name="cardNumber" onChange={handleChange} minLength="16" maxLength="16" required />
+                                <input type='number' name="cardNumber" onChange={handleChange} minLength="16" maxLength="16"  />
                                 <label>Cardholder's name</label>
-                                <input type='text' name="cardHolderName" onChange={handleChange} required />
+                                <input type='text' name="cardHolderName" onChange={handleChange}  />
                                 <label>CVC</label>
-                                <input type='number' name="cvc" onChange={handleChange} minLength="3" maxLength="3" required />
+                                <input type='number' name="cvc" onChange={handleChange} minLength="3" maxLength="3"  />
                                 <label>Expire Month/Year</label>
-                                <input type='month' name="expireDate" onChange={handleChange} required />
+                                <input type='month' name="expireDate" onChange={handleChange}  />
                             </div>
                         </div>
                         {error && <p style={{ color: 'red' }}>{error}</p>}

@@ -3,54 +3,45 @@ import { createSlice } from "@reduxjs/toolkit";
 const loadState = (key) => {
     try {
         const serializedState = localStorage.getItem(key);
-        if (serializedState === null) {
-            return null; 
-        }
-        return JSON.parse(serializedState);
+        return serializedState ? JSON.parse(serializedState) : null;
     } catch (err) {
         console.error("Error loading state from local storage:", err);
-        return null; 
+        return null;
     }
 };
 
-const initialShopState = loadState('shops') || "";
+// Initial state loader functions
+const initialShopIdState = loadState('shopId') || "";
+const initialShopStatusState = loadState('shopStatus') || ""; 
 
-const shopSlice = createSlice({
+const shopIdSlice = createSlice({
     name: 'shopId',
-    initialState: initialShopState,
+    initialState: initialShopIdState,
     reducers: {
         addShopId(state, action) {
             return action.payload;
         },
-        deleteShopId(state) {
-            return {};
-        },
-        clearStorage(state) {
-            return {};
+        clearShopId(state) {
+            return "";
         }
     }
 });
 
-const initialStatusState = loadState('shopStatus') || "";
-
 const shopStatusSlice = createSlice({
     name: 'shopStatus',
-    initialState: initialStatusState,
+    initialState: initialShopStatusState,
     reducers: {
         addShopStatus(state, action) {
             return action.payload;
         },
-        deleteShopStatus(state) {
-            return {};
-        },
-        clearStorageStatus(state) {
-            return {};
+        clearShopStatus(state) {
+            return "";
         }
     }
 });
 
-export const { addShopStatus, deleteShopStatus, clearStorageStatus } = shopStatusSlice.actions;
-export const { addShopId, deleteShopId, clearStorage } = shopSlice.actions;
+export const { addShopId, clearShopId } = shopIdSlice.actions;
+export const { addShopStatus, clearShopStatus } = shopStatusSlice.actions;
 
-export default shopSlice.reducer;
+export const shopIdReducer = shopIdSlice.reducer;
 export const shopStatusReducer = shopStatusSlice.reducer;

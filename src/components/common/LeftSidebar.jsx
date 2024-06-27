@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom'; 
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './LeftSidebar.css';
-
+import { useSelector } from "react-redux";
 import bikePulseLogo from '../../assets/logo.png';
 import ShopManagementIcon from '../../assets/Shop.svg';
 import UserManagementIcon from '../../assets/UserManagement.svg';
@@ -16,8 +17,19 @@ import Account_Setting_Icon from '../../assets/account_setting.svg';
 import ChatSettingIcon from '../../assets/chat.svg';
 
 const LeftSidebar = () => {
+  const shopId = useSelector((state) => state.shopId);
+  const [shops, setShops] = useState([]);
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get(`http://localhost:8095/shop/${shopId}`);
+      setShops(data);
+    };
+    fetchData();
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -25,9 +37,9 @@ const LeftSidebar = () => {
 
   return (
     <div className='left-sidebar'>
-      {/* <div className="logo-container">
-        <img src={bikePulseLogo} alt="BikePulse Logo" className="logo-website" />
-      </div> */}
+      <div className="logo-container">
+      <p>{shops.shopName}</p>
+      </div>
 
       <div className="search-bar">
         <input type="text" placeholder="Search..." />

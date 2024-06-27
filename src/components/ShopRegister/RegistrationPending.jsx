@@ -6,11 +6,14 @@ import File from '../../assets/File.png';
 import axios from 'axios'; 
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import { useSelector } from 'react-redux';
+
 
 const RegistrationPending = () => {
-   
-    const navigate = useNavigate();
     
+    const shopId = useSelector((state) => state.shopId);
+    const navigate = useNavigate();
+    const [approvedStatus, setApprovedStatus] = useState('');
     const [formData, setFormData] = useState({
         shopName: "",
         email: "",
@@ -39,60 +42,49 @@ const RegistrationPending = () => {
           const parsedData = JSON.parse(storedData);
           // Set the state with the retrieved data
           setFormData(parsedData);
-          console.log(formData.shopName);
+        //   console.log(formData.shopName);
         }
       }, []); 
 
-      // active status
-
-    const [shopId, setShopId] = useState('4');
-    const [approvedStatus, setApprovedStatus] = useState('');
-    const [currentStatus, setCurrentStatus] = useState({approvedStatus: '' });
-    
+      
 
     useEffect(() => {
-        if (shopId) {
-            fetchUserStatus();
-        }
-    }, [shopId]);
+        const fetchData = async () => {
+            try {
+                const { data } = await axios.get(`http://localhost:8095/shop/${shopId}`);
+                const { approvedStatus } = data;
+                setApprovedStatus(approvedStatus);
 
-    const fetchUserStatus = async () => {
-        try {
-            const response = await axios.get(`http://localhost:8095/shop/${shopId}`);
-            const approvedStatus = response.data.approvedStatus;
-            
-            setApprovedStatus(approvedStatus);  
-            setCurrentStatus({ approvedStatus });
-           
-    
-            switch (approvedStatus) {
-                case "pending":
-                    setParagraph(pendingParaghraph.pending);
-                    break;
-                case "approved":
-                    setParagraph(pendingParaghraph.approved);
-                    break;
-                case "rejected":
-                    setParagraph(pendingParaghraph.rejected);
-                    break;
-                default:
-                    console.error("Unknown approvedStatus:", approvedStatus);
+                switch (approvedStatus) {
+                    case "pending":
+                        setParagraph(pendingParaghraph.pending);
+                        break;
+                    case "approved":
+                        setParagraph(pendingParaghraph.approved);
+                        break;
+                    case "rejected":
+                        setParagraph(pendingParaghraph.rejected);
+                        break;
+                    default:
+                        console.error("Unknown approvedStatus:", approvedStatus);
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
             }
-        } catch (error) {
-            console.error("Error fetching user status:", error);
-        }
-    };
+        };
+        fetchData();
+    }, []);
 
     const handleClick = () => {
         switch (approvedStatus) {
             case "pending":
-                navigate('/home');
+                navigate('/RegistrationComplete');
                 break;
             case "approved":
                 navigate("/Congratulations");
                 break;
             case "rejected":
-                navigate('/home');
+                navigate('/');
                 break;
             default:
                 console.error("Unknown approvedStatus:", approvedStatus);

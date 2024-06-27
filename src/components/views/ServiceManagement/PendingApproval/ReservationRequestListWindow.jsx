@@ -10,7 +10,7 @@ import Footer from "../../../../components/ShopRegister/Footer";
 import { useSelector } from "react-redux";
 
 const ReservationRequestListWindow = () => {
-  const shopId = useSelector((state) => state.shops);
+  const shopId = useSelector((state) => state.shopId);
   const [reservationRequests, setReservationRequests] = useState([
     [
       {
@@ -76,18 +76,26 @@ const ReservationRequestListWindow = () => {
   // }, [acceptedReservations]);
 
   useEffect(() => {
-    // Simulating fetching shop data (replace with actual API call)
     const fetchData = async () => {
-      // Replace the following line with your actual API call or data fetching logic
-      const data = await fetch(
-        `http://localhost:8095/reservation/shop/${shopId}`
-      ).then((response) => response.json());
-      setReservationRequests(data);
+      try {
+        const response = await fetch(`http://localhost:8095/reservation/shop/${shopId}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setReservationRequests(data);
+        } else {
+          console.error('Unexpected data format:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };
-    console.log(reservationRequests);
-
+  
     fetchData();
   }, []);
+  
 
   const [selectedReservationId, setSelectedReservationId] = useState(null);
 

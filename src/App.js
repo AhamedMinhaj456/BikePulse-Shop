@@ -34,6 +34,8 @@ import ServiceProcessManagementDetails from "./components/views/ServiceManagemen
 
 
 import { Provider } from "react-redux";
+import AuthProvider from "./Utils/AuthProvider";
+import ProtectedRoute from "./Utils/ProtecedRoute"; 
 import store from "./Store/Store";
 
 
@@ -42,9 +44,39 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Routes>
-          {/* <Route path="/" element={<AdminHomePage />} /> */}
+          
+          {/* register flow */}
+          <Route path="/" element={<ShopHome />} />
+          <Route path="/ShopLogin" element={<ShopLogin />} />
+          <Route path="/ForgetPassword" element={<ForgetPassword />} />
+          <Route path="/verification" element={<Verification />} />
+          <Route path="/SetPassword" element={<SetPassword />} />
 
-          {/* <Route path="/" element={<LeftSidebar />} /> */}
+          <Route element={<ProtectedRoute/>}>
+
+          
+          <Route path="/DateTimePicker" element={<DateTimePicker />} />
+          
+          <Route
+            path="/RegistrationComplete"
+            element={<RegistrationComplete />}
+          />
+          <Route path="/Congratulations" element={<Congratulations />} />
+          <Route
+            path="/RegistrationPending"
+            element={<RegistrationPending />}
+          />
+          <Route path="/Congratz2" element={<Congratz2 />} />
+          
+          <Route path="/SecurePayment" element={<SecurePayment />} />
+          
+          <Route path="/Subscription" element={<Subscription />} />
+          <Route path="/shopOwnerFlow" element={<ShopOwnerFlow />} />
+
+
+
+          {/* shop dashboard window */}
+          
           <Route path="/ShopMainWindow" element={<ShopMainWindow />} />
           <Route
             path="/customer-management"
@@ -101,26 +133,7 @@ const App = () => {
             path="/CompletedServices"
             element={<CompletedServices />}
           />
-
-          <Route path="/" element={<ShopHome />} />
-          <Route path="/ShopLogin" element={<ShopLogin />} />
-          <Route path="/DateTimePicker" element={<DateTimePicker />} />
-          <Route path="/SetPassword" element={<SetPassword />} />
-          <Route
-            path="/RegistrationComplete"
-            element={<RegistrationComplete />}
-          />
-          <Route path="/Congratulations" element={<Congratulations />} />
-          <Route
-            path="/RegistrationPending"
-            element={<RegistrationPending />}
-          />
-          <Route path="/Congratz2" element={<Congratz2 />} />
-          <Route path="/ForgetPassword" element={<ForgetPassword />} />
-          <Route path="/SecurePayment" element={<SecurePayment />} />
-          <Route path="/verification" element={<Verification />} />
-          <Route path="/Subscription" element={<Subscription />} />
-          <Route path="/shopOwnerFlow" element={<ShopOwnerFlow />} />
+          </Route>
         </Routes>
       </Router>
     </Provider>

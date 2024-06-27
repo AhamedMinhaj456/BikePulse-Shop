@@ -7,6 +7,18 @@
     align-items: center;
     text-align: center;
     padding: 20px;
+    
+}
+
+.title1 {
+    margin-bottom: 20px; /* Adjust margin as needed */
+    text-align: center; /* Center-align text */
+}
+
+.title1 h2 {
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Set text color */
 }
 
 .subscription-left {
@@ -27,24 +39,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 820px;
+    max-width: 1120px;
     background: lightblue;
     border-radius: 10px;
     margin-top: 10px;
     padding: 30px 40px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
-
-
-
-.subscription-right h2 {
-    font-size: 30px;
-    margin-top: 10px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-
 
 .subscription-registrationform {
     display: flex;
@@ -52,9 +55,51 @@
     justify-content: space-between;
     gap: 20px; /* Reduced the gap for smaller screens */
     width: 100%;
+    max-width: 1120px; /* Ensure it matches .subscription-right max-width */
     margin-top: 30px;
-    overflow-y: scroll;
 }
+
+.subscription-registrationform > div {
+    width: 300px;
+    height: 350px;
+    background-color: #a6f3f6; /* White background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-registrationform > div p {
+    margin: 0; /* Remove default margins */
+    text-align: left; /* Align text to the left */
+}
+
+.subscription-registrationform > div .tx-2 {
+    margin-top: 20px; /* Add space between tx-1 and tx-2 */
+}
+
+.subscription-registrationform > div .tx-3 {
+    flex: 1; /* Make tx-3 take remaining vertical space */
+    margin-top: 30px;
+}
+
+.subscription-registrationform > div button {
+    background-color: #16c45b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+    margin-top: auto; /* Push button to bottom */
+}
+
+.subscription-registrationform > div button:hover {
+    background-color: #128c4e;
+}
+
 
 
 .advancedplan,
@@ -116,11 +161,18 @@
     background-color: #128c4e;
 }
 
+.subscription-left h2 {
+    color: #4105f8;
+    margin: 40px 0;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
 @media (max-width: 1024px) {
-    .subscription-left h2 {
-        margin: 40px 0;
-        font-size: 2rem;
-    }
+   
+   
 
     .subscription-right {
         padding: 20px;

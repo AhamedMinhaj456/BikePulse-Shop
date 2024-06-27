@@ -1,19 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import customerReducer from '../Slices/CustomerSlice';
-import shopReducer, { shopStatusReducer } from '../Slices/ShopSlice'; 
+import { shopIdReducer, shopStatusReducer } from '../Slices/ShopSlice'; // Adjusted imports for individual reducers
 
 const saveState = (state) => {
     try {
         const serializedCustomersState = JSON.stringify(state.customers.customerId);
         localStorage.setItem('customers', serializedCustomersState);
 
-        const serializedShopsState = JSON.stringify(state.shops.shopId);
-        localStorage.setItem('shops', serializedShopsState);
+        const serializedShopIdState = JSON.stringify(state.shopId);
+        localStorage.setItem('shopId', serializedShopIdState);
 
-        const serializedShopsStatusState = JSON.stringify(state.shopStatus);
-        localStorage.setItem('shopStatus', serializedShopsStatusState);
-    } catch {
-        // Ignore write errors
+        const serializedShopStatusState = JSON.stringify(state.shopStatus);
+        localStorage.setItem('shopStatus', serializedShopStatusState);
+    } catch (err) {
+        console.error("Error saving state to local storage:", err);
     }
 };
 
@@ -23,24 +23,15 @@ const localStorageMiddleware = store => next => action => {
     return result;
 };
 
-const clearLocalStorageMiddleware = store => next => action => {
-    if (action.type === 'customerId/clearStorage' || action.type === 'shopId/clearStorage' || action.type === 'shopStatus/clearStorage') {
-        localStorage.removeItem('customers');
-        localStorage.removeItem('shops');
-        localStorage.removeItem('shopStatus');
-    }
-    return next(action);
-};
-
 const store = configureStore({
     devTools: true,
     reducer: {
         customers: customerReducer,
-        shops: shopReducer, 
-        shopStatus: shopStatusReducer, 
+        shopId: shopIdReducer, // Changed to use shopIdReducer directly
+        shopStatus: shopStatusReducer, // Changed to use shopStatusReducer directly
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(localStorageMiddleware, clearLocalStorageMiddleware)
+        getDefaultMiddleware().concat(localStorageMiddleware)
 });
 
 export default store;

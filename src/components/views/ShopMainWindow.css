@@ -8,7 +8,7 @@
     display: flex;
     flex: 1; /* Take up remaining space between navbar and footer */
     flex-direction: row;
-    background: url('../../assets/home.jpg') center/cover;
+    /* background: url('../../assets/home.jpg') center/cover; */
     
 }
 
@@ -20,10 +20,10 @@
 }
 
 .shop-main-middle h1 {
-    font-size: 50pt;
+    font-size: 30pt;
     font-weight: 900;
     margin-top: 20px;
-    color: rgb(238, 236, 242);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
