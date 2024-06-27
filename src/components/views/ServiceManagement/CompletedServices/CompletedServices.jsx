@@ -86,7 +86,7 @@ const CompletedServices = () => {
 
   return (
     <div className="service-process-management1">
-      <Navbar/>
+      
     
     <div className="service-process-management">
       <LeftSidebar />
@@ -138,7 +138,7 @@ const CompletedServices = () => {
 
       <RightSidebar />
     </div>
-    <Footer/>
+   
     </div>
   );
 };

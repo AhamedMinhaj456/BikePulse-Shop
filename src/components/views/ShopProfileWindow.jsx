@@ -73,7 +73,7 @@ const ShopProfileWindow = () => {
 
     return (
         <div className="shop-profile-window1">
-            <Navbar/>
+            
         <div className="shop-profile-window">
             <LeftSidebar profileImage={profileData.profileImage} />
           

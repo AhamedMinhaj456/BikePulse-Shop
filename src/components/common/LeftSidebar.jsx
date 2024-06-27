@@ -62,7 +62,7 @@ const LeftSidebar = () => {
         </Link>
 
         
-        <Link to="/payment-management" className="list-item">
+        {/* <Link to="/payment-management" className="list-item">
           <img src={PaymentManagementIcon} alt="PaymentManagement" />
           <span>Payment Management</span>
         </Link>
@@ -107,7 +107,7 @@ const LeftSidebar = () => {
               <span>Chat Setting</span>
             </Link>
           </div>
-        )}
+        )} */}
 
       </div>
     </div>

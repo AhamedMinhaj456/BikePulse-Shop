@@ -117,11 +117,12 @@ const RegistrationPending = () => {
                               <p3 >Best Regards. </p3> 
                               <p4 >BikePulse Team. </p4>
                             </div>
-
+                            {
+                            approvedStatus === "approved" &&
                             <div className="rp-button-container">
                                 <button type="submit" onClick={handleClick}>Continue</button>
                             </div>
-                        
+                            }
                     </div>
                 </div>
             </div>

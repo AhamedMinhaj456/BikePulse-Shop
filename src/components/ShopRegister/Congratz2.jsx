@@ -75,7 +75,7 @@ const Congratz2 = () => {
             </div>
 
             <div className="congratz-button-container">
-              <button type="submit" onClick={() => navigate("/shop-setting-window")}>
+              <button type="submit" onClick={() => navigate("/shopmainWindow")}>
                 Continue
               </button>
             </div>

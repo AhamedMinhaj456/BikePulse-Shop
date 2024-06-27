@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
 import './navbar.css';
 import logoImage from '../../../src/assets/bike2.png'
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 
 
 function Navbar() {
+    const navigate = useNavigate();
+    const [shops, setShops] = useState("");
+    const shopStatus = useSelector((state) => state.shopStatus);
+    const shopId = useSelector((state) => state.shopId);
     const [showDropdown, setShowDropdown] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -20,6 +27,37 @@ function Navbar() {
         setActiveDropdown(null);
     };
 
+    const handleUserIconClick = () => {
+        navigate("/dash");
+    };
+
+    const handleLogout = () => {
+        // Implement logout logic here, e.g., clear localStorage, dispatch logout action, etc.
+        // For demonstration purposes, let's clear shopId and customerStatus in localStorage
+        localStorage.removeItem('shopId');
+        localStorage.removeItem('customerStatusId');
+        // Redirect to login or home page after logout
+        navigate("/");
+    };
+
+    const fetchCustomerData = async () => {
+        try {
+            if (shopId) {
+                console.log(`Fetching data for shopId: ${shopId}`);
+                const response = await axios.get(`http://localhost:8095/shop/${shopId}`);
+                console.log('API response:', response.data);
+                setShops(response.data);
+            }
+        } catch (error) {
+            console.error('There has been a problem with your fetch operation:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchCustomerData();
+    }, [shopId]);
+
+
     return (
         <div className="navbar-container">
             <div className="navbar-logo">
@@ -27,11 +65,11 @@ function Navbar() {
                 <div className="brand-text brand-text-gradient">BikePulse</div>
             </div>
             <div className="navbar-links">
-                <Link to="hhttps://bikepulse-customer.vercel.app/" className="nav-link">Home</Link>
+                <Link to="/" className="nav-link">Home</Link>
 
                 
                 <div className="dropdown" onMouseEnter={() => toggleDropdown("services")} onMouseLeave={closeDropdown}>
-    <Link to="/services" className={`nav-link ${activeDropdown === "services" && 'active'}`}>Services</Link>
+    <Link  className={`nav-link ${activeDropdown === "services" && 'active'}`}>Services</Link>
     {activeDropdown === "services" && (
         <div className={`dropdown-content ${showDropdown ? 'show' : ''}`}>
             <h1 className="main-title">Elevate Your Bike Experience with Our Services</h1>
@@ -56,7 +94,7 @@ function Navbar() {
 </div>
 
                 <div className="dropdown" onMouseEnter={() => toggleDropdown("technology")} onMouseLeave={closeDropdown}>
-    <Link to="/technology" className={`nav-link ${activeDropdown === "technology" && 'active'}`}>Technology</Link>
+    <Link  className={`nav-link ${activeDropdown === "technology" && 'active'}`}>Technology</Link>
     {activeDropdown === "technology" && (
         <div className={`dropdown-content ${showDropdown ? 'show' : ''}`}>
             <h1 className="main-title">Harness the Power of Technology</h1>
@@ -81,7 +119,7 @@ function Navbar() {
 
 
     <div className="dropdown" onMouseEnter={() => toggleDropdown("resources")} onMouseLeave={closeDropdown}>
-    <Link to="/resources" className={`nav-link ${activeDropdown === "resources" && 'active'}`}>Resources</Link>
+    <Link className={`nav-link ${activeDropdown === "resources" && 'active'}`}>Resources</Link>
     {activeDropdown === "resources" && (
         <div className={`dropdown-content ${showDropdown ? 'show' : ''}`}>
             <h1 className="main-title">Empower Your Shop with Resources</h1>
@@ -106,7 +144,7 @@ function Navbar() {
 
 
 <div className="dropdown" onMouseEnter={() => toggleDropdown("pricing")} onMouseLeave={closeDropdown}>
-    <Link to="/pricing" className={`nav-link ${activeDropdown === "pricing" && 'active'}`}>Pricing</Link>
+    <Link  className={`nav-link ${activeDropdown === "pricing" && 'active'}`}>Pricing</Link>
     {activeDropdown === "pricing" && (
         <div className={`dropdown-content ${showDropdown ? 'show' : ''}`}>
             <h1 className="main-title">Unlock Your Shop's Potential</h1>
@@ -127,12 +165,15 @@ function Navbar() {
                     </p>
                 </div>
             </div>
+            
         </div>
  
 
                     )}
                 </div>
-                {/*<Link to="/ShopLogin" className="login-button">LOGIN</Link>*/}
+               
+                <Link to="/ShopLogin" className="login-button">LOGIN</Link>
+              
             </div>
         </div>
     );

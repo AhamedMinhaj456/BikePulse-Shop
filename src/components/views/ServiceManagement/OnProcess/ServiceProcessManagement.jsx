@@ -81,7 +81,7 @@ const ServiceProcessManagement = () => {
 
   return (
     <div className="service-process-management1">
-      <Navbar/>
+      
     
     <div className="service-process-management">
       <LeftSidebar />
@@ -157,7 +157,7 @@ const ServiceProcessManagement = () => {
 
       <RightSidebar />
     </div>
-    <Footer/>
+    
     </div>
   );
 };

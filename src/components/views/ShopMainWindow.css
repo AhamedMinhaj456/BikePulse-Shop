@@ -1,54 +1,233 @@
 .shop-main-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
+    height: 100vh;
+  }
 
-.shop-main {
+  @media (max-aspect-ratio: 16/9) {
+    .shop-main-container {
+      width: auto;
+      height: 100%;
+    }
+  }
+  
+  .shop-main {
     display: flex;
-    flex: 1; /* Take up remaining space between navbar and footer */
-    flex-direction: row;
-    /* background: url('../../assets/home.jpg') center/cover; */
-    
-}
-
-.shop-main-middle {
-    flex-grow: 1; /* Take up remaining space between the sidebars */
-    display: flex;   
-    align-items: center;   
-   
-}
-
-.shop-main-middle h1 {
-    font-size: 30pt;
-    font-weight: 900;
-    margin-top: 20px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    
-}
-
-
-@media (max-width: 768px) {
-   
-
+    flex: 1;
+  }
+  
+  .shop-main-middle {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 100px; /* Adjust margins to fit your layout */
+    margin-right: 100px;
+    margin-top: 30px;
+  }
+  
+  .calendar-overview {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(120deg, #f0f4f8, #eef3f8);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .calendar-overview:hover {
+    background: linear-gradient(120deg, #e1e9f0, #d4d5d6);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .calendar-overview .calendar {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .calendar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .schedule {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .schedule-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-input input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e1e9f0;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  .schedule-input input:focus {
+    border-color: #61b5ff;
+    outline: none;
+  }
+  
+  .schedule-input button {
+    padding: 10px 20px;
+    background: #61b5ff;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .schedule-input button:hover {
+    background: #b2e1a6;
+  }
+  
+  .schedules {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .schedules li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e1e9f0;
+    transition: background-color 0.3s;
+  }
+  
+  .schedules li.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .schedules li:hover {
+    background: #f0f4f8;
+  }
+  
+  .schedules li span {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .schedules li button {
+    background: #36d8f4;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .schedules li button:hover {
+    background: #b2e1a6;
+  }
+  
+  .selected-event {
+    background-color: #61b5ff !important;
+    color: #ffffff !important;
+    border-radius: 4px;
+  }
+  
+  .hamburger-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  .hamburger-icon:hover {
+    color: #18bc9c;
+  }
+  
+  @media screen and (min-width: 769px) {
+    .hamburger-icon {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
     .shop-main-middle {
-        flex-direction: column;
-        width: 100%; 
-        margin: 20px 0; 
+      margin-left: 0;
     }
-
-    .shop-main h1 {
-        margin: 20px auto; 
+  
+    .calendar-overview {
+      margin-left: 0;
+      margin-right: 0;
     }
-
-    .left-sidebar,
-    .right-sidebar {
-        width: 100%; 
+  
+    .calendar h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
-
-   
-}
+  
+    .schedule h2 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  
+    .schedule-input {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .schedule-input input {
+      margin-bottom: 10px;
+    }
+  
+    .schedule-input button {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .schedules li {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .schedules li span {
+      margin-bottom: 10px;
+    }
+  
+    .calendar-overview .rbc-toolbar {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .calendar-overview .rbc-toolbar button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .calendar-overview .rbc-toolbar .rbc-btn-group {
+      display: flex;
+      flex-direction: column;
+    }
+  }

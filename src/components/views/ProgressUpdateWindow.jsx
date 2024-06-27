@@ -63,7 +63,7 @@ const ProgressUpdateWindow = () => {
 
   return (
     <div className="progress-update-main1">
-      <Navbar/>
+      
     <div className="progress-update-main">
       <LeftSidebar />
       <div className="progress-update-management">

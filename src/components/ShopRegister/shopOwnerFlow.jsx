@@ -78,7 +78,7 @@ const ShopOwnerFlow = () => {
       <div className="shopOwnerFlow-right">
         <form onSubmit={handleSubmit}>
           <h1>Get Started</h1>
-          <p>Already have an account? <a href="http://localhost:3000/ShopLogin">Click here</a></p>
+          <p>Already have an account? <a href="/ShopLogin">Click here</a></p>
           <label>Shop Name</label>
           <input
             type="text"

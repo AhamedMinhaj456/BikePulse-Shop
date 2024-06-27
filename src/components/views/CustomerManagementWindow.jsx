@@ -19,7 +19,7 @@ const CustomerManagementWindow = () => {
   return (
 
     <div className="customer-management1">
-    <Navbar/>  
+    
     <div className="customer-management">
       <LeftSidebar />
 
