@@ -59,7 +59,7 @@ const Login = () => {
         dispatch(addShopId(loggedInShopId));
         dispatch(addShopStatus(loggedInShopStatus));
         alert(response.data.message);
-        navigate("/home");
+        navigate("/shopmainwindow");
       } else if (response.data.status === false) {
         alert(response.data.message);
       }

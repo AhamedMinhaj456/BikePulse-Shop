@@ -163,7 +163,16 @@
   margin-bottom: 10px;
   width: 100%;
   max-width: 725px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap value as needed */
 }
+
+.service-process-filter-container label,
+.service-process-filter-container select {
+  margin-bottom: 10px; /* Optional: additional spacing for each element */
+}
+
 
 .service-process-filter-container label {
   display: block;

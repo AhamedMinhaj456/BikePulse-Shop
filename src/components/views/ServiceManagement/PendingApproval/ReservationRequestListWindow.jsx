@@ -110,7 +110,7 @@ const ReservationRequestListWindow = () => {
 
   return (
     <div className="reservation-management1">
-      <Navbar />
+      
       <div className="reservation-management">
         <LeftSidebar />
 
