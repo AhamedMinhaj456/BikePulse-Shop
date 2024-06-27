@@ -15,7 +15,7 @@ const RightSidebar = () => {
 
   const handleLogout = () => {
     dispatch(clearShopId());
-    dispatch(clearShopStatus());
+    dispatch(clearShopStatus);
   };
 
   return (

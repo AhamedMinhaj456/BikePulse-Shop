@@ -27,7 +27,7 @@ function Navbar() {
                 <div className="brand-text brand-text-gradient">BikePulse</div>
             </div>
             <div className="navbar-links">
-                <Link to="http://192.168.56.1:3000/" className="nav-link">Home</Link>
+                <Link to="hhttps://bikepulse-customer.vercel.app/" className="nav-link">Home</Link>
 
                 
                 <div className="dropdown" onMouseEnter={() => toggleDropdown("services")} onMouseLeave={closeDropdown}>
